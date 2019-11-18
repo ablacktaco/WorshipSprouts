@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4XG-Rp-B4C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Imq-pd-r4X">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -286,10 +286,41 @@
             </objects>
             <point key="canvasLocation" x="1947.826086956522" y="118.52678571428571"/>
         </scene>
+        <!--Loading Sprouts View Controller-->
+        <scene sceneID="AEN-ss-QOU">
+            <objects>
+                <viewController id="Imq-pd-r4X" customClass="LoadingSproutsViewController" customModule="WorshipSprouts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KjA-JO-2gv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sprouts" translatesAutoresizingMaskIntoConstraints="NO" id="YOE-ZE-qLh">
+                                <rect key="frame" x="132" y="373" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="YSd-ff-7H5"/>
+                                    <constraint firstAttribute="height" constant="150" id="gND-gN-vC8"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YOE-ZE-qLh" firstAttribute="centerX" secondItem="KjA-JO-2gv" secondAttribute="centerX" id="lsq-Wm-TzJ"/>
+                            <constraint firstItem="YOE-ZE-qLh" firstAttribute="centerY" secondItem="KjA-JO-2gv" secondAttribute="centerY" id="nHM-gd-WQ9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="M93-UR-doZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="sproutsImage" destination="YOE-ZE-qLh" id="mqS-Bu-ugA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oYb-B6-9kB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-767" y="119"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="FIc-0n-7uP">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4XG-Rp-B4C" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="worshipNavi" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="4XG-Rp-B4C" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="Uj0-hb-G6V">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -306,6 +337,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="sprouts" width="1120" height="1120"/>
         <image name="豆芽" width="720" height="348"/>
     </resources>
 </document>
