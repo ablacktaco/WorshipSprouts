@@ -20,9 +20,6 @@ class RecordViewController: UIViewController {
         navigationController?.navigationBar.tintColor = .white
         navigationItem.title = "History"
         
-        let backButton = UIBarButtonItem(title: "Worship", style: .plain, target: self, action: nil)
-        navigationItem.backBarButtonItem = backButton
-        
         if worshipHistory.worship_history_for_spout.count == 0 {
             historyTable.backgroundView = loadingView
             historyTable.separatorStyle = .none
@@ -73,6 +70,8 @@ extension RecordViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let identifier = "historyCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! RecordTableViewCell
+        
+        cell.selectionStyle = .none
         cell.setHistory(worshipHistory: worshipHistory, indexPath: indexPath)
         
         return cell

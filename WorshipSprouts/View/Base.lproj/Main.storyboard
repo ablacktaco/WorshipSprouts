@@ -88,6 +88,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
+                                            <action selector="checkContent:" destination="BYZ-38-t0r" eventType="editingChanged" id="wsP-0C-ybf"/>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="xX9-Wx-aDl"/>
                                         </connections>
                                     </textField>
