@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4XG-Rp-B4C">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Worship Sprouts-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="WorshipViewController" customModule="WorshipSprouts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="豆芽" translatesAutoresizingMaskIntoConstraints="NO" id="Cer-Sb-yhM">
+                                <rect key="frame" x="0.0" y="88" width="414" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="IAJ-x2-e2Z"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="STS-Mr-ZyE">
+                                <rect key="frame" x="0.0" y="358" width="414" height="538"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="worshipListCell" rowHeight="85" id="wFm-qi-ID7" customClass="WorshipTableViewCell" customModule="WorshipSprouts" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="85"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wFm-qi-ID7" id="TU9-m8-Tdd">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wml-ve-g77">
+                                                    <rect key="frame" x="20" y="12.5" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="3pj-Nq-kZU"/>
+                                                        <constraint firstAttribute="width" secondItem="wml-ve-g77" secondAttribute="height" multiplier="1:1" id="a3C-ni-6Qb"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u66-si-EZi">
+                                                    <rect key="frame" x="314" y="27.5" width="80" height="30"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="ZPd-2y-Aix"/>
+                                                    </constraints>
+                                                    <state key="normal" title="一鍵祭拜">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pee-cX-Cjr">
+                                                    <rect key="frame" x="100" y="24.5" width="71" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Pee-cX-Cjr" firstAttribute="leading" secondItem="wml-ve-g77" secondAttribute="trailing" constant="20" id="9BW-TW-6gj"/>
+                                                <constraint firstItem="Pee-cX-Cjr" firstAttribute="centerY" secondItem="TU9-m8-Tdd" secondAttribute="centerY" id="Gcv-SG-XnK"/>
+                                                <constraint firstAttribute="trailing" secondItem="u66-si-EZi" secondAttribute="trailing" constant="20" id="j8d-3g-jqz"/>
+                                                <constraint firstItem="wml-ve-g77" firstAttribute="centerY" secondItem="TU9-m8-Tdd" secondAttribute="centerY" id="l16-Jd-c9j"/>
+                                                <constraint firstItem="u66-si-EZi" firstAttribute="centerY" secondItem="TU9-m8-Tdd" secondAttribute="centerY" id="v3p-0c-bhQ"/>
+                                                <constraint firstItem="wml-ve-g77" firstAttribute="leading" secondItem="TU9-m8-Tdd" secondAttribute="leading" constant="20" id="xbM-By-omO"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="itemImage" destination="wml-ve-g77" id="ajj-pV-w8g"/>
+                                            <outlet property="itemName" destination="Pee-cX-Cjr" id="T27-oj-nrd"/>
+                                            <outlet property="worshipButton" destination="u66-si-EZi" id="77M-HZ-stu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="twT-mr-73Y"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="bzR-Xr-dhk"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6tg-4d-6c5">
+                                <rect key="frame" x="0.0" y="288" width="414" height="70"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入祭拜者名稱" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="60R-BE-49h">
+                                        <rect key="frame" x="20" y="15" width="374" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="oZB-jj-xsK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="xX9-Wx-aDl"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="1ax-kn-hxy"/>
+                                    <constraint firstItem="60R-BE-49h" firstAttribute="centerY" secondItem="6tg-4d-6c5" secondAttribute="centerY" id="OaI-O1-Urd"/>
+                                    <constraint firstItem="60R-BE-49h" firstAttribute="leading" secondItem="6tg-4d-6c5" secondAttribute="leading" constant="20" id="n0e-Bj-8Az"/>
+                                    <constraint firstItem="60R-BE-49h" firstAttribute="centerX" secondItem="6tg-4d-6c5" secondAttribute="centerX" id="wYo-Iz-u2U"/>
+                                    <constraint firstAttribute="trailing" secondItem="60R-BE-49h" secondAttribute="trailing" constant="20" id="yVS-jY-xE0"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4C-IP-74q">
+                                <rect key="frame" x="200" y="148" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="KKO-Ka-mwZ"/>
+                                    <constraint firstAttribute="width" constant="50" id="vQ3-ef-7ZR"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="doNotTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dVE-r7-Mxg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="X4C-IP-74q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="0Jb-Wt-3Ah"/>
+                            <constraint firstItem="STS-Mr-ZyE" firstAttribute="top" secondItem="6tg-4d-6c5" secondAttribute="bottom" id="5bE-Hn-b5d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="STS-Mr-ZyE" secondAttribute="trailing" id="5p4-zM-GmP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6tg-4d-6c5" secondAttribute="trailing" id="A4K-zD-cyt"/>
+                            <constraint firstAttribute="bottom" secondItem="STS-Mr-ZyE" secondAttribute="bottom" id="AFv-a9-UI3"/>
+                            <constraint firstItem="Cer-Sb-yhM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Spd-sb-cj7"/>
+                            <constraint firstItem="STS-Mr-ZyE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VEC-3C-7os"/>
+                            <constraint firstItem="6tg-4d-6c5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Wiw-NN-3OX"/>
+                            <constraint firstItem="X4C-IP-74q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="200" id="g1O-7N-5C0"/>
+                            <constraint firstItem="Cer-Sb-yhM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gtG-n2-LbP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cer-Sb-yhM" secondAttribute="trailing" id="uqV-40-MqG"/>
+                            <constraint firstItem="6tg-4d-6c5" firstAttribute="top" secondItem="Cer-Sb-yhM" secondAttribute="bottom" id="zoj-2A-lql"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Worship Sprouts" id="j99-Et-HGJ">
+                        <barButtonItem key="rightBarButtonItem" title="祭拜紀錄" id="njK-fn-id2">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="enx-nr-68l" kind="show" id="vxr-Gk-eDd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="loadingView" destination="wZV-lP-3k4" id="Duk-by-YW3"/>
+                        <outlet property="worshipTable" destination="STS-Mr-ZyE" id="kSV-aI-wyC"/>
+                        <outlet property="worshiperName" destination="60R-BE-49h" id="tQT-C1-XfB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="wZV-lP-3k4">
+                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="8xK-bl-jBv">
+                            <rect key="frame" x="90" y="90" width="20" height="20"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="8xK-bl-jBv" firstAttribute="centerX" secondItem="wZV-lP-3k4" secondAttribute="centerX" id="mSV-mP-JTv"/>
+                        <constraint firstItem="8xK-bl-jBv" firstAttribute="centerY" secondItem="wZV-lP-3k4" secondAttribute="centerY" id="yym-8l-NgO"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="JqX-ed-Lyb"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="118.52678571428571"/>
+        </scene>
+        <!--Record View Controller-->
+        <scene sceneID="arh-yS-4Gd">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="enx-nr-68l" customClass="RecordViewController" customModule="WorshipSprouts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ra2-Kp-TGg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dqw-nb-u0C">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="historyCell" rowHeight="70" id="a0O-un-2XY" customClass="RecordTableViewCell" customModule="WorshipSprouts" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a0O-un-2XY" id="5EZ-l0-P8U">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jYH-lZ-i7Z">
+                                                    <rect key="frame" x="20" y="9.5" width="253" height="51"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8Sw-By-EM5">
+                                                            <rect key="frame" x="0.0" y="0.0" width="121.5" height="20.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8M-6t-Pk3">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="在" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgr-xQ-0mc">
+                                                                    <rect key="frame" x="52" y="0.0" width="17.5" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cO0-Li-QrA">
+                                                                    <rect key="frame" x="79.5" y="0.0" width="42" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7ln-ut-43N">
+                                                            <rect key="frame" x="0.0" y="30.5" width="253" height="20.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="祭拜了" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9M-WZ-aXF">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="52" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHr-P3-lPx">
+                                                                    <rect key="frame" x="62" y="0.0" width="42" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="給好想之神豆芽！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXu-Fi-l8m">
+                                                                    <rect key="frame" x="114" y="0.0" width="139" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jYH-lZ-i7Z" firstAttribute="leading" secondItem="5EZ-l0-P8U" secondAttribute="leadingMargin" id="aqc-hw-WoN"/>
+                                                <constraint firstItem="jYH-lZ-i7Z" firstAttribute="centerY" secondItem="5EZ-l0-P8U" secondAttribute="centerY" id="rK2-1S-Fen"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="worshipItem" destination="NHr-P3-lPx" id="WIK-fy-n6Q"/>
+                                            <outlet property="worshipTime" destination="cO0-Li-QrA" id="gsW-rU-Un4"/>
+                                            <outlet property="worshiper" destination="W8M-6t-Pk3" id="0ya-nd-m4t"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="enx-nr-68l" id="mSA-vp-CCk"/>
+                                    <outlet property="delegate" destination="enx-nr-68l" id="zBD-VK-5tA"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Dqw-nb-u0C" firstAttribute="leading" secondItem="FdI-pM-8Ki" secondAttribute="leading" id="7Ty-Sn-4HY"/>
+                            <constraint firstAttribute="bottom" secondItem="Dqw-nb-u0C" secondAttribute="bottom" id="ZbE-oe-wOn"/>
+                            <constraint firstItem="Dqw-nb-u0C" firstAttribute="top" secondItem="ra2-Kp-TGg" secondAttribute="top" id="uQu-vT-oBm"/>
+                            <constraint firstItem="FdI-pM-8Ki" firstAttribute="trailing" secondItem="Dqw-nb-u0C" secondAttribute="trailing" id="xaA-ef-5G8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FdI-pM-8Ki"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="c37-o8-k36"/>
+                    <connections>
+                        <outlet property="historyTable" destination="Dqw-nb-u0C" id="ZOf-dc-P0u"/>
+                        <outlet property="loadingView" destination="sXj-0O-UhF" id="jq9-IL-7QP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ub-VP-Bue" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="sXj-0O-UhF">
+                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="0rE-jg-fc4">
+                            <rect key="frame" x="90" y="90" width="20" height="20"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="0rE-jg-fc4" firstAttribute="centerY" secondItem="sXj-0O-UhF" secondAttribute="centerY" id="cFg-o7-o3A"/>
+                        <constraint firstItem="0rE-jg-fc4" firstAttribute="centerX" secondItem="sXj-0O-UhF" secondAttribute="centerX" id="oMI-uk-jPT"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="MCE-da-ysi"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="1947.826086956522" y="118.52678571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FIc-0n-7uP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4XG-Rp-B4C" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="Uj0-hb-G6V">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Dfs-rz-tqG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9HQ-Bg-Vrn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="豆芽" width="720" height="348"/>
+    </resources>
+</document>
