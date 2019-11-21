@@ -16,9 +16,6 @@ class RecordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        navigationController?.navigationBar.tintColor = .white
-        navigationItem.title = "History"
         
         if worshipHistory.worship_history_for_spout.count == 0 {
             historyTable.backgroundView = loadingView
@@ -30,7 +27,6 @@ class RecordViewController: UIViewController {
         
         getHistory { (worshipHistory) in
             self.worshipHistory = worshipHistory
-            print(worshipHistory)
             DispatchQueue.main.async {
                 self.historyTable.reloadData()
             }
@@ -47,6 +43,7 @@ extension RecordViewController {
             URLSession.shared.dataTask(with: url) { (data, response, error) in
                 if let error = error {
                     print("error: \(error.localizedDescription)")
+                    return
                 }
                 guard let data = data else { return }
                 if let response = response as? HTTPURLResponse {
@@ -61,8 +58,8 @@ extension RecordViewController {
     
 }
 
-
 extension RecordViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return worshipHistory.worship_history_for_spout.count
     }
@@ -76,6 +73,5 @@ extension RecordViewController: UITableViewDataSource, UITableViewDelegate {
         
         return cell
     }
-
 
 }

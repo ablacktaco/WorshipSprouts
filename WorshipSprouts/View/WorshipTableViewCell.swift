@@ -18,8 +18,8 @@ class WorshipTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    @IBOutlet var itemImage: UIImageView!
-    @IBOutlet var itemName: UILabel!
+    @IBOutlet private var itemImage: UIImageView!
+    @IBOutlet private var itemName: UILabel!
     @IBOutlet var worshipButton: UIButton!
     
 }

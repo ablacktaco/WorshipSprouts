@@ -14,15 +14,13 @@ class LoadingSproutsViewController: UIViewController {
         super.viewDidLoad()
         
         sproutsImage.center.x = -sproutsImage.frame.width/2
-        UIView.animate(withDuration: 2, animations: {
+        UIView.animate(withDuration: 3, animations: {
             self.sproutsImage.center.x += (self.sproutsImage.frame.width + self.view.frame.width)/2
         }) { (_) in
-            if let worshipNavigation = self.storyboard?.instantiateViewController(withIdentifier: "worshipNavi") as? UINavigationController {
-                self.present(worshipNavigation, animated: false, completion: nil)
-            }
+            self.dismiss(animated: false, completion: nil)
         }
     }
     
-    @IBOutlet var sproutsImage: UIImageView!
+    @IBOutlet private var sproutsImage: UIImageView!
     
 }

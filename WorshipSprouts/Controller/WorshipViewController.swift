@@ -15,8 +15,9 @@ class WorshipViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let backButton = UIBarButtonItem(title: "Worship", style: .plain, target: self, action: nil)
-        navigationItem.backBarButtonItem = backButton
+        if let loadingVC = storyboard?.instantiateViewController(withIdentifier: "loadingSproutsVC") as? LoadingSproutsViewController {
+            present(loadingVC, animated: false, completion: nil)
+        }
         
         if worshipList.items_for_spout.count == 0 {
             worshipTable.backgroundView = loadingView
@@ -38,6 +39,7 @@ class WorshipViewController: UIViewController {
     @IBOutlet var worshipTable: UITableView!
     @IBOutlet var loadingView: UIView!
     @IBOutlet var worshiperName: UITextField!
+    
     @IBAction func checkContent(_ sender: UITextField) {
         if sender.text?.trimmingCharacters(in: .whitespaces) == "" {
             worshipTable.reloadData()
@@ -46,7 +48,7 @@ class WorshipViewController: UIViewController {
         }
     }
     @IBAction func doNotTouch(_ sender: UIButton) {
-        let alertController = UIAlertController(title: "摸屁摸啊！", message: nil, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "喵👿", message: "摸屁摸啊！", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "QQ", style: .default, handler: nil))
         self.present(alertController, animated: true, completion: nil)
     }
@@ -54,12 +56,14 @@ class WorshipViewController: UIViewController {
 }
 
 extension WorshipViewController {
+    
     func getWorshipList(closure: @escaping (WorshipList) -> Void) {
         let address = "https://33660b8c.ngrok.io/api/spout"
         if let url = URL(string: address) {
             URLSession.shared.dataTask(with: url) { (data, response, error) in
                 if let error = error {
                     print("error: \(error.localizedDescription)")
+                    return
                 }
                 guard let data = data else { return }
                 if let response = response as? HTTPURLResponse {
@@ -73,7 +77,6 @@ extension WorshipViewController {
     }
     
     @objc func tapToWorship(sender: UIButton) {
-        
         sender.isEnabled = false
         sender.backgroundColor = .lightGray
         
@@ -99,7 +102,7 @@ extension WorshipViewController {
                     let dataString = String(data: data, encoding: .utf8) {
                     print ("got data: \(dataString)")
                     DispatchQueue.main.async {
-                        let alertController = UIAlertController(title: "祭拜成功", message: nil, preferredStyle: .alert)
+                        let alertController = UIAlertController(title: "喵❤️", message: "祭拜成功", preferredStyle: .alert)
                         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                         self.present(alertController, animated: true, completion: nil)
                         sender.isEnabled = true

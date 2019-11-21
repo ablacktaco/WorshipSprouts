@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Imq-pd-r4X">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uaZ-cX-lmf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -22,7 +22,7 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="STS-Mr-ZyE">
-                                <rect key="frame" x="0.0" y="358" width="414" height="538"/>
+                                <rect key="frame" x="0.0" y="358" width="414" height="455"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="worshipListCell" rowHeight="85" id="wFm-qi-ID7" customClass="WorshipTableViewCell" customModule="WorshipSprouts" customModuleProvider="target">
@@ -119,7 +119,7 @@
                             <constraint firstItem="STS-Mr-ZyE" firstAttribute="top" secondItem="6tg-4d-6c5" secondAttribute="bottom" id="5bE-Hn-b5d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="STS-Mr-ZyE" secondAttribute="trailing" id="5p4-zM-GmP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6tg-4d-6c5" secondAttribute="trailing" id="A4K-zD-cyt"/>
-                            <constraint firstAttribute="bottom" secondItem="STS-Mr-ZyE" secondAttribute="bottom" id="AFv-a9-UI3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="STS-Mr-ZyE" secondAttribute="bottom" id="AFv-a9-UI3"/>
                             <constraint firstItem="Cer-Sb-yhM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Spd-sb-cj7"/>
                             <constraint firstItem="STS-Mr-ZyE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VEC-3C-7os"/>
                             <constraint firstItem="6tg-4d-6c5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Wiw-NN-3OX"/>
@@ -130,14 +130,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Worship Sprouts" id="j99-Et-HGJ">
-                        <barButtonItem key="rightBarButtonItem" title="祭拜紀錄" id="njK-fn-id2">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <segue destination="enx-nr-68l" kind="show" id="vxr-Gk-eDd"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Worship Sprouts" id="j99-Et-HGJ"/>
                     <connections>
                         <outlet property="loadingView" destination="wZV-lP-3k4" id="Duk-by-YW3"/>
                         <outlet property="worshipTable" destination="STS-Mr-ZyE" id="kSV-aI-wyC"/>
@@ -163,7 +156,7 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="118.52678571428571"/>
         </scene>
-        <!--Record View Controller-->
+        <!--History-->
         <scene sceneID="arh-yS-4Gd">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="enx-nr-68l" customClass="RecordViewController" customModule="WorshipSprouts" customModuleProvider="target" sceneMemberID="viewController">
@@ -172,7 +165,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dqw-nb-u0C">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="historyCell" rowHeight="70" id="a0O-un-2XY" customClass="RecordTableViewCell" customModule="WorshipSprouts" customModuleProvider="target">
@@ -255,13 +248,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Dqw-nb-u0C" firstAttribute="leading" secondItem="FdI-pM-8Ki" secondAttribute="leading" id="7Ty-Sn-4HY"/>
-                            <constraint firstAttribute="bottom" secondItem="Dqw-nb-u0C" secondAttribute="bottom" id="ZbE-oe-wOn"/>
-                            <constraint firstItem="Dqw-nb-u0C" firstAttribute="top" secondItem="ra2-Kp-TGg" secondAttribute="top" id="uQu-vT-oBm"/>
+                            <constraint firstItem="FdI-pM-8Ki" firstAttribute="bottom" secondItem="Dqw-nb-u0C" secondAttribute="bottom" id="ZbE-oe-wOn"/>
+                            <constraint firstItem="Dqw-nb-u0C" firstAttribute="top" secondItem="FdI-pM-8Ki" secondAttribute="top" id="uQu-vT-oBm"/>
                             <constraint firstItem="FdI-pM-8Ki" firstAttribute="trailing" secondItem="Dqw-nb-u0C" secondAttribute="trailing" id="xaA-ef-5G8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FdI-pM-8Ki"/>
                     </view>
-                    <navigationItem key="navigationItem" id="c37-o8-k36"/>
+                    <navigationItem key="navigationItem" title="History" id="c37-o8-k36"/>
                     <connections>
                         <outlet property="historyTable" destination="Dqw-nb-u0C" id="ZOf-dc-P0u"/>
                         <outlet property="loadingView" destination="sXj-0O-UhF" id="jq9-IL-7QP"/>
@@ -284,12 +277,12 @@
                     <viewLayoutGuide key="safeArea" id="MCE-da-ysi"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="1947.826086956522" y="118.52678571428571"/>
+            <point key="canvasLocation" x="1048" y="826"/>
         </scene>
         <!--Loading Sprouts View Controller-->
         <scene sceneID="AEN-ss-QOU">
             <objects>
-                <viewController id="Imq-pd-r4X" customClass="LoadingSproutsViewController" customModule="WorshipSprouts" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loadingSproutsVC" id="Imq-pd-r4X" customClass="LoadingSproutsViewController" customModule="WorshipSprouts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KjA-JO-2gv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -315,12 +308,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oYb-B6-9kB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-767" y="119"/>
+            <point key="canvasLocation" x="1988" y="119"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Worship-->
         <scene sceneID="FIc-0n-7uP">
             <objects>
-                <navigationController storyboardIdentifier="worshipNavi" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="4XG-Rp-B4C" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="4XG-Rp-B4C" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Worship" image="list" selectedImage="list" id="3YF-Lg-Spp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="Uj0-hb-G6V">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -335,8 +329,48 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="uPP-Ze-TWk">
+            <objects>
+                <tabBarController id="uaZ-cX-lmf" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="bdV-Zf-ZtY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="4XG-Rp-B4C" kind="relationship" relationship="viewControllers" id="0eU-sw-skJ"/>
+                        <segue destination="bgV-dQ-V4P" kind="relationship" relationship="viewControllers" id="Jvt-h3-Zle"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EQc-ht-blJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1106" y="502"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="PaY-Eu-156">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bgV-dQ-V4P" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="History" image="history" selectedImage="history" id="YXR-D8-02u"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="imC-hp-Pah">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="enx-nr-68l" kind="relationship" relationship="rootViewController" id="NIp-TV-Zn3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B73-VZ-wA6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="826"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="history" width="32" height="32"/>
+        <image name="list" width="32" height="32"/>
         <image name="sprouts" width="1120" height="1120"/>
         <image name="豆芽" width="720" height="348"/>
     </resources>

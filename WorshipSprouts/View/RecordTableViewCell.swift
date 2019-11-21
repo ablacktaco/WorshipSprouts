@@ -18,10 +18,9 @@ class RecordTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    @IBOutlet var worshiper: UILabel!
-    @IBOutlet var worshipTime: UILabel!
-    @IBOutlet var worshipItem: UILabel!
-    
+    @IBOutlet private var worshiper: UILabel!
+    @IBOutlet private var worshipTime: UILabel!
+    @IBOutlet private var worshipItem: UILabel!
 
 }
 
